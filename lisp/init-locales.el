@@ -17,4 +17,12 @@
   (set-selection-coding-system (if (eq system-type 'windows-nt) 'utf-16-le 'utf-8))
   (prefer-coding-system 'utf-8))
 
+(require 'chinese-fonts-setup)
+
+
+(global-set-key (kbd "C-\\") 'toggle-input-method)
+
+(custom-set-variables
+ '(markdown-command "/usr/bin/markdown_py"))
+
 (provide 'init-locales)
